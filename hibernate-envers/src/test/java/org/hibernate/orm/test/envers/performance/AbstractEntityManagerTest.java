@@ -36,7 +36,7 @@ import jakarta.persistence.EntityManager;
  * @author Adam Warski (adam at warski dot org)
  * @author Lukasz Antoniak (lukasz dot antoniak at gmail dot com)
  */
-public abstract class AbstractEntityManagerTest extends AbstractEnversTest {
+public abstract class AbstractEntityManagerTest { //extends AbstractEnversTest {
 	public static final Dialect DIALECT = DialectContext.getDialect();
 
 	private EntityManagerFactoryBuilderImpl entityManagerFactoryBuilder;
@@ -73,7 +73,7 @@ public abstract class AbstractEntityManagerTest extends AbstractEnversTest {
 
 	@BeforeClassOnce
 	public void init() throws IOException {
-		init( true, getAuditStrategy() );
+		//init( true, getAuditStrategy() );
 	}
 
 	protected void init(boolean audited, String auditStrategy) throws IOException {
