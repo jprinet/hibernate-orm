@@ -292,6 +292,14 @@ tasks.withType( Test.class ).each { test ->
 	test.include 'org/hibernate/orm/test/**'
 }
 
+tasks.withType( Test.class ).configureEach {
+    distribution {
+        enabled = true
+        maxLocalExecutors = 1
+        maxRemoteExecutors = 0
+    }
+}
+
 sourceSets {
 	test {
 		resources {
